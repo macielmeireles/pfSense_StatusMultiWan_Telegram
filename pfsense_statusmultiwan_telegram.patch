@@ -1,0 +1,42 @@
+--- /etc/inc/gwlb.inc.orig	2023-12-18 17:43:03.697517000 -0300
++++ /etc/inc/gwlb.inc	2023-12-18 17:42:27.625085000 -0300
+@@ -1329,7 +1329,38 @@
+ 			}
+ 			if ($statuschanged) {
+ 				log_error($msg);
+-				notify_all_remote($msg);
++				// notify_all_remote($msg);
++
++				$origMsg = false;
++				$statusMap = [
++				    'online,none' => ['status' => 'online', 'icon' => '🟢'],
++				    'online,loss' => ['status' => 'loss', 'icon' => '🟡'],
++				    'down,highdelay' => ['status' => 'loss', 'icon' => '🟡'],
++				    'down,highloss' => ['status' => 'offline', 'icon' => '🔴']
++				];
++				$gatewayStatusMsg = "\nGateway Group: " . $group['name'] . "\n\n";
++
++				foreach ($gateways_status as $GW_NAME => $gateway_info) {
++				    $loss = str_replace('%', '', $gateway_info['loss']);
++				    $loss = is_numeric($loss) ? floatval($loss) : 0;
++				    $statusKey = "{$gateway_info['status']},{$gateway_info['substatus']}";
++				    if ($loss == 100 && $gateway_info['status'] == 'down' && $gateway_info['substatus'] == 'highloss') {
++				        $statusKey .= ',100%';
++				    }
++				    $statusTranslate = isset($statusMap[$statusKey]) ? $statusMap[$statusKey]['status'] : '';
++				    $icon = isset($statusMap[$statusKey]) ? $statusMap[$statusKey]['icon'] : '❓';
++				    $gatewayStatusMsg .= sprintf("%s %s: %s%s\n", $icon, $gateway_info['name'], $statusTranslate, $statusTranslate == 'loss' ? ", {$loss}% loss" : '');
++				}
++				notify_all_remote($gatewayStatusMsg);
++
++				if ($origMsg) {
++				    $txtOrigMsg = "\n\n";
++				    foreach ($gateways_status as $GW_NAME => $gateway_info) {
++				        $txtOrigMsg .= sprintf("%s | %s | %s | %s\n", $gateway_info['name'], $gateway_info['status'], $gateway_info['substatus'], $gateway_info['loss']);
++				    }
++				    notify_all_remote($txtOrigMsg);
++				}
++
+ 				if (isset($gateways_arr[$gwname]['interface'])) {
+ 					$pluginparams['interface'] = $gateways_arr[$gwname]['interface'];
+ 				}

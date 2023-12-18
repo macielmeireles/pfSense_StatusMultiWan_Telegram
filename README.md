@@ -20,7 +20,7 @@
 2) Click on System, Patches.
 3) Click on Add New Patch.
 4) Fill in the `description` field, suggestion: `telegram_status_multiwan`.
-5) Fill in the `Patch Contents` field with the content of the file in raw format. For convenience, the link is here: `https://raw.githubusercontent.com/macielmeireles/pfSense_StatusMultiWan_Telegram/main/pfsense_telegram_status_multiwan.patch`.
+5) Fill in the `Patch Contents` field with the content of the file in raw format. For convenience, the link is here: [link](https://raw.githubusercontent.com/macielmeireles/pfSense_StatusMultiWan_Telegram/main/pfsense_telegram_status_multiwan.patch).
 6) In the `Path Strip Count` field, change to 1.
 7) Click on `Save` at the end of the page.
 8) Apply, to use click on the apply button next to the name of the chosen patch in item 4.
@@ -37,7 +37,7 @@ Claro, aqui está a versão em português técnico dos passos:
 2) Clique em Sistema, Patches.
 3) Clique em Adicionar Novo Patch.
 4) Preencha o campo `descrição`, sugestão: `telegram_status_multiwan`.
-5) Preencha o campo `Conteúdo do Patch` com o conteúdo do arquivo no formato raw. Para facilitar, o link está aqui: `https://raw.githubusercontent.com/macielmeireles/pfSense_StatusMultiWan_Telegram/main/pfsense_telegram_status_multiwan.patch`.
+5) Preencha o campo `Conteúdo do Patch` com o conteúdo do arquivo no formato raw. Para facilitar, o link está aqui: [link](https://raw.githubusercontent.com/macielmeireles/pfSense_StatusMultiWan_Telegram/main/pfsense_telegram_status_multiwan.patch).
 6) No campo `Contagem de Retirada de Caminho`, altere para 1.
 7) Clique em `Salvar` no final da página.
 8) Aplique, para usar clique no botão aplicar ao lado do nome do patch escolhido no item 4.

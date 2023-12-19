@@ -14,6 +14,14 @@
 ## Screenshot
 ![Screenshot](https://github.com/macielmeireles/OpnSense-MultiWan-Telegram/blob/main/screenshot.jpg)
 
+## Overview
+- This patch changes the default pfSense message to the message as per the screenshot which is easier to read and visually more appealing.
+
+### Prerequisites
+1) Configured a gateway group in pfSense.
+2) Have Telegram installed and configured.
+3) Completed the integration procedure between Telegram and pfSense.
+4) Ensure that pfSense already sends the default message to your Telegram when one of the links becomes unavailable, for example.
 
 ### Installation
 1) Log in as an administrator via pfSense GUI.
@@ -29,6 +37,16 @@
 Easter egg: if you want to see the original message, you can edit the patch by changing the variable `$origMsg = true;`.
 
 <br /><br />
+
+### Installation
+- Este "patch" altera a mensagem padrão do pfSense para a mensagem conforme a captura de tela, que é mais fácil de ler e visualmente mais atraente.
+
+### Prerequisites
+1) Configurar um grupo de gateways no pfSense.
+2) Ter o Telegram instalado e configurado.
+3) Completar o procedimento de integração entre o Telegram e o pfSense.
+4) Certifique-se de que o pfSense já envia a mensagem padrão para o seu Telegram quando um dos links fica indisponível, por exemplo.
+
 
 ### Instalação
 Claro, aqui está a versão em português técnico dos passos:

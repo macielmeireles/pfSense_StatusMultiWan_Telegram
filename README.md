@@ -25,6 +25,7 @@
 4) Ensure that pfSense already sends the default message to your Telegram when one of the links becomes unavailable, for example.
 
 ### Installation
+0) Install "System Patches" package via Package Manager (System - Package Manager).
 1) Log in as an administrator via pfSense GUI.
 2) Click on System, Patches.
 3) Click on Add New Patch.
@@ -52,7 +53,9 @@ Easter egg: if you want to see the original message, you can edit the patch by c
 4) Certifique-se de que o pfSense já envia a mensagem padrão para o seu Telegram quando um dos links fica indisponível, por exemplo.
 
 
+
 ### Instalação
+0) Instale o pacote "System Patches" via Package Manager (System - Package Manager).
 1) Faça login como administrador via GUI do pfSense.
 2) Clique em Sistema, Patches.
 3) Clique em Adicionar Novo Patch.

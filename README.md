@@ -1,5 +1,5 @@
-# pfSense_StatusMultiWan_Telegram
-- Script for pfSense: monitors multi-WAN gateway status and sends notifications via Telegram 
+# pfSense_Telegram_StatusMultiWan
+- Patch for pfSense: monitors multi-WAN gateway status and sends notifications via Telegram 
 
 
 ## Donation | Doações
@@ -12,7 +12,8 @@
 
 
 ## Screenshot
-![Screenshot](https://github.com/macielmeireles/OpnSense-MultiWan-Telegram/blob/main/screenshot.jpg)
+![Screenshot](https://github.com/macielmeireles/OpnSense_Telegram_StatusMultiWan/blob/main/screenshot.jpg)
+
 
 ## Overview
 - This patch changes the default pfSense message to the message as per the screenshot which is easier to read and visually more appealing.
@@ -28,7 +29,7 @@
 2) Click on System, Patches.
 3) Click on Add New Patch.
 4) Fill in the `description` field, suggestion: `telegram_status_multiwan`.
-5) Fill in the `Patch Contents` field with the content of the file in raw format. For convenience, the link is here: [link](https://raw.githubusercontent.com/macielmeireles/pfSense_StatusMultiWan_Telegram/main/pfsense_telegram_status_multiwan.patch).
+5) Fill in the `Patch Contents` field with the content of the file in raw format. For convenience, the link is here: [link](https://raw.githubusercontent.com/macielmeireles/OpnSense_Telegram_StatusMultiWan/main/pfsense_telegram_status_multiwan.patch).
 6) In the `Path Strip Count` field, change to 1.
 7) Click on `Save` at the end of the page.
 8) Apply, to use click on the apply button next to the name of the chosen patch in item 4.
@@ -38,7 +39,7 @@ Easter egg: if you want to see the original message, you can edit the patch by c
 
 <br /><br />
 
-### Installation
+### Visão Geral
 - Este "patch" altera a mensagem padrão do pfSense para a mensagem conforme a captura de tela, que é mais fácil de ler e visualmente mais atraente.
 
 ### Prerequisites
@@ -49,8 +50,6 @@ Easter egg: if you want to see the original message, you can edit the patch by c
 
 
 ### Instalação
-Claro, aqui está a versão em português técnico dos passos:
-
 1) Faça login como administrador via GUI do pfSense.
 2) Clique em Sistema, Patches.
 3) Clique em Adicionar Novo Patch.
@@ -60,7 +59,6 @@ Claro, aqui está a versão em português técnico dos passos:
 7) Clique em `Salvar` no final da página.
 8) Aplique, para usar clique no botão aplicar ao lado do nome do patch escolhido no item 4.
 9) Se preferir, é possível clicar no botão reverter.
-Em português técnico, você poderia dizer:
 
 Easter egg: Se você quiser ver a mensagem original, pode editar o patch alterando a variável `$origMsg = true;`.
 
